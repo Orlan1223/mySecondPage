@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts.js"></script>
+</head>
+<body>
+
+    <p>Primer numero</p>
+    <input type="number" id="primerNumero">
+
+    <p>Segundo numero</p>
+    <input type="number" id="segundoNumero">
+
+    <button onclick="mostrarResultado()">Calcular</button>
+
+    <h2 id="textoResultado">suma</h2>
+
+
+
+
+    <script>
+
+        function sumar(numero1, numero2){
+            resultado = +numero1 + +numero2;
+            return resultado;
+        }
+
+
+
+        function mostrarResultado(){
+            let elementoNumeroUno = document.getElementById("primerNumero");
+            let elementoNumeroDos = document.getElementById("segundoNumero");
+            let ElementoTextoResultado = document.getElementById("textoResultado");
+            let elementoSuma = sumar(elementoNumeroUno.value, elementoNumeroDos.value);
+            ElementoTextoResultado.textContent = elementoSuma;
+        }
+
+        
+        
+        
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+
+    <button onclick="aleatorio(10, 15)">Dame un numero aleatorio</button>
+    <h2>Numero aleatorio: <span id="textoAleatorio">---</span> </h2>
+
+    <script>
+
+        let elementoAleatorio = document.getElementById("textoAleatorio");
+
+    function aleatorio(minimo, maximo){
+        maximo = maximo + 1;
+        resultado = Math.floor(Math.random() * (maximo - minimo) + minimo);
+        elementoAleatorio.textContent = resultado;
+
+    }
+
+    function calcularCircunferencia(diametro){
+        return Math.PI * diametro;
+    }
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

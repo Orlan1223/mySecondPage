@@ -1,0 +1,212 @@
+
+
+
+body{
+    background: linear-gradient(45deg, rgb(127, 79, 190), rgb(79, 42, 165));
+}
+
+.titulo{
+
+    font-size: 50px;
+
+    text-align: center;
+
+}
+
+.contenedor{
+    background: rgb(102, 64, 153);
+    margin: auto 490px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border: solid rgb(102, 80, 153);
+    
+}
+
+
+
+tr{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+
+td{
+    display: contents;
+}
+
+.operadores button{
+    width: 80px;
+    height: 60px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 3px;
+    background-color: rgb(31, 31, 31);
+    border: none;
+    color: white;
+}
+
+.operadores button:hover{
+    width: 80px;
+    height: 60px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 3px;
+    background-color: rgb(25, 25, 25);
+    border: none;
+    color: white;
+}
+
+.operadores2 button{
+    width: 166px;
+    height: 60px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 3px;
+    background-color: rgb(31, 31, 31);
+    border: none;
+    color: white;
+}
+
+.operadores2 button:hover{
+    width: 166px;
+    height: 60px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 3px;
+    background-color: rgb(25, 25, 25);
+    border: none;
+    color: white;
+}
+
+.operadores3 button{
+    width: 166px;
+    height: 60px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 3px;
+    background-color: rgb(31, 31, 31);
+    border: none;
+    color: white;
+}
+
+.operadores3 button:hover{
+    width: 166px;
+    height: 60px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 3px;
+    background-color: rgb(25, 25, 25);
+    border: none;
+    color: white;
+}
+
+.operadores4 button{
+    width: 109px;
+    height: 60px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 3px;
+    background-color: rgb(31, 31, 31);
+    border: none;
+    color: white;
+}
+
+.operadores4 button:hover{
+    width: 109px;
+    height: 60px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0%;
+    background-color: rgb(25, 25, 25);
+    border: none;
+    color: white;
+}
+
+#resultado{
+    width: 345px;
+    height: 20px;
+    background: rgb(43, 41, 41);
+    color: white;
+    margin: 0%;
+    
+}
+
+.indicarNumeros input{
+    width: 164px;
+    height: 20px;
+    background: rgb(43, 41, 41);
+    color: white;
+}
+
+
+.nav__responsive-ul{
+    display: none;
+}
+
+
+.nav__li:hover > a{
+    
+    
+    color: #bbb;
+}
+
+.nav__li:hover > i{
+    
+    
+    color: #bbb;
+}
+
+.nav__li{
+    display: inline-block;
+    padding: 12px;
+    color: #fff;
+}
+
+.nav__li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav__li i{
+    
+    box-sizing: border-box;
+    text-align: right;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        width:100%;
+    }
+    thead {
+        display: none;
+    }
+    tr:nth-of-type(2n) {
+        background-color: inherit;
+    }
+    tr td:first-child {
+        background: #f0f0f0;
+        font-weight:bold;
+        font-size:1.3em;
+    }
+    tbody td {
+        display: block;
+        text-align:center;
+    }
+    tbody td:before {
+        content: attr(data-th);
+        display: block;
+        text-align:center;
+    }
+}
+
+
+
+
+
+
+
+

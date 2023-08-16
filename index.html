@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilo.css">
+    <title>Calculadora</title>
+    <script src="https://kit.fontawesome.com/f66e96e125.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav class="nav">
+        <ul class="nav__ul">
+            <li class="nav__li"><i class="fas fa-home"></i><a href="#">Inicio</a></li>
+            <li class="nav__li"><i class="fas fa-dollar-sign"></i><a href="#">Gana dinero</a></li>
+            <li class="nav__li"><i class="fas fa-person"></i><a href="#">Sobre nosotros</a></li>
+            <li class="nav__li"><i class="fas fa-handshake-angle"></i><a href="#">Ayuda</a></li>
+        </ul>
+        <ul class="nav__responsive-ul">
+            <div class="nav__responsive-buttom"></div>
+            <div class="nav__li-container">
+                <li class="nav__responsive-li"><i class="fas fa-home"></i><a href="#">Inicio</a></li>
+                <li class="nav__responsive-li"><i class="fas fa-dollar-sign"></i><a href="#">Gana dinero</a></li>
+                <li class="nav__responsive-li"><i class="fas fa-person"></i><a href="#">Sobre nosotros</a></li>
+                <li class="nav__responsive-li"><i class="fas fa-handshake-angle"></i><a href="#">Ayuda</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <div>
+       <h1>Bienvenido</h1> 
+    </div>
+
+        <div class="contenedor">
+            <h2 class="titulo">Calculadora</h2>
+            <table>
+                <tr class="indicarNumeros">
+                    <td><input id="num1" type="number"></td>
+                    <td><input id="num2" type="number"></td>   
+                    
+                </tr>
+
+                <tr class="operadores">
+                    <td><button onclick="suma()"> + </button></td>
+                    <td><button onclick="resta()"> - </button></td>
+                    <td><button onclick="multiplicacion()"> x </button></td>
+                    <td><button onclick="division()"> / </button></td>
+                </tr>
+
+                <tr class="operadores2">
+                    <td><button onclick="potencia()"> ^ </button></td>
+                    <td><button onclick="raizCuadrada()"> √ </button></td>
+                </tr>
+
+                <tr class="operadores3">
+                    <td><button onclick="absoluto()">  (| |) </button></td>
+                    <td><button onclick="random()"> random </button></td>  
+                </tr>
+
+                <tr class="resultado">
+                    <td><p id="resultado"></p></td>
+                </tr>
+            </table>
+            
+            <script>
+                
+                let elementoUno = document.getElementById("num1");
+                let elementoDos = document.getElementById("num2");
+                let elementoResultado = document.getElementById("resultado");
+
+
+
+                function sumar(numero1, numero2){
+                   resultadoSuma = +numero1 + +numero2;
+                   return resultadoSuma;
+                }
+
+                function suma(){
+                let elementoSuma = sumar(elementoUno.value, elementoDos.value);
+
+                elementoResultado.textContent = elementoSuma;
+                }
+
+                function restar(numero1, numero2){
+                    resultadoResta = -numero2 - -numero1;
+                    return resultadoResta;
+                }
+
+                function resta(){
+                let elementoResta = restar(elementoUno.value, elementoDos.value);
+
+                elementoResultado.textContent = elementoResta;
+                }
+
+                function multiplicar(numero1, numero2){
+                    resultadoMultiplicacion = numero1 * numero2;
+                    return resultadoMultiplicacion;
+                }
+
+                function multiplicacion(){
+                    let elementoMultiplicacion = multiplicar(elementoUno.value, elementoDos.value);
+                    elementoResultado.textContent = elementoMultiplicacion;
+                }
+
+                function dividir(numero1, numero2){
+                    resultadoDivision = numero1 / numero2;
+                    return resultadoDivision; 
+                }
+                
+                function division(){
+                    let elementoDivision = dividir(elementoUno.value, elementoDos.value);
+                    elementoResultado.textContent = elementoDivision; 
+                }
+
+                function potenciar(numero1, numero2){
+                    let resultadoPotencia = numero1 ** numero2;
+                    return resultadoPotencia;
+                }
+
+                function potencia(){
+                    let elementoPotencia = potenciar(elementoUno.value, elementoDos.value);
+                    elementoResultado.textContent = elementoPotencia;
+                }
+
+                function sacarRaizCuadrada(numero2){
+                    let resultadoRaizCuadrada = Math.sqrt(numero2);
+                    return resultadoRaizCuadrada;
+                }
+
+                function raizCuadrada(){
+                    let elementoRaizCuadrada = sacarRaizCuadrada(elementoDos.value).toFixed(3);
+                    elementoResultado.textContent = elementoRaizCuadrada;
+                }
+                
+                function sacarAbsoluto(numero2){
+                    let resultadoAbsoluto = Math.abs(numero2);
+                    return resultadoAbsoluto;
+                }
+
+                function absoluto(){
+                    let elementoAbsoluto = sacarAbsoluto(elementoDos.value);
+                    elementoResultado.textContent = elementoAbsoluto;
+                }
+                
+
+                function generarRandom(){
+                    let numeroRandom =  Math.random()*10000000;
+                    return numeroRandom;
+                }
+
+                function random(){
+                    let elementoRandom = generarRandom().toFixed(3);
+                    elementoResultado.textContent = elementoRandom;
+                }
+
+                function redondeo(valor) {
+                    let resultadoRound = Math.round(valor);
+                    return resultadoRound;
+                }
+
+                function round() {
+                    let valor = parseFloat(elementoResultado.textContent);
+                    let elementoRound = redondeo(valor);
+                    elementoResultado.textContent = elementoRound;
+                }
+
+                function redondeoPiso(valor) {
+                    let resultadoFloor = Math.floor(valor);
+                    return resultadoFloor;
+                }
+
+                function floor() {
+                    let valor = parseFloat(elementoResultado.textContent);
+                    let elementoFloor = redondeoPiso(valor);
+                    elementoResultado.textContent = elementoFloor;
+                }
+
+                function redondeoTecho(valor) {
+                    let resultadoCeil = Math.ceil(valor);
+                    return resultadoCeil;
+                }
+
+                function ceil() {
+                    let valor = parseFloat(elementoResultado.textContent);
+                    let elementoCeil = redondeoTecho(valor);
+                    elementoResultado.textContent = elementoCeil;
+                }
+
+            </script>
+
+            <table>
+                <tr class="operadores4">
+                <td><button onclick="round()"> round </button></td>
+                <td><button onclick="floor()"> floor </button></td>
+                <td><button onclick="ceil()"> ceil  </button></td>
+                </tr>
+            </table>
+        </div>
+
+
+        <footer>
+            <p>copyright</p>
+        </footer>
+
+</body>
+</html>

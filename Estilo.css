@@ -2,19 +2,25 @@
 
 
 body{
-    background: linear-gradient(45deg, rgb(127, 79, 190), rgb(79, 42, 165));
+    background: linear-gradient(45deg, rgb(27, 0, 61), rgb(21, 0, 71));
+}
+
+h1{
+    font-size: 50px;
+    color:  white;
+    text-align: center;
 }
 
 .titulo{
 
     font-size: 50px;
-
+    color:  white;
     text-align: center;
 
 }
 
 .contenedor{
-    background: rgb(102, 64, 153);
+    background: rgb(0, 89, 255);
     margin: auto 490px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -45,18 +51,18 @@ td{
     margin: 3px;
     background-color: rgb(31, 31, 31);
     border: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.541);
 }
 
 .operadores button:hover{
     width: 80px;
     height: 60px;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
     margin: 3px;
     background-color: rgb(25, 25, 25);
     border: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.541);
 }
 
 .operadores2 button{
@@ -67,62 +73,62 @@ td{
     margin: 3px;
     background-color: rgb(31, 31, 31);
     border: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.541);
 }
 
 .operadores2 button:hover{
     width: 166px;
     height: 60px;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
     margin: 3px;
     background-color: rgb(25, 25, 25);
     border: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.541);
 }
 
 .operadores3 button{
     width: 166px;
     height: 60px;
-    font-size: 25px;
+    font-size: 15px;
     cursor: pointer;
     margin: 3px;
     background-color: rgb(31, 31, 31);
     border: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.541);
 }
 
 .operadores3 button:hover{
     width: 166px;
     height: 60px;
-    font-size: 25px;
+    font-size: 12px;
     cursor: pointer;
     margin: 3px;
     background-color: rgb(25, 25, 25);
     border: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.541);
 }
 
 .operadores4 button{
     width: 109px;
     height: 60px;
-    font-size: 25px;
+    font-size: 15px;
     cursor: pointer;
     margin: 3px;
     background-color: rgb(31, 31, 31);
     border: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.541);
 }
 
 .operadores4 button:hover{
     width: 109px;
     height: 60px;
-    font-size: 25px;
+    font-size: 13px;
     cursor: pointer;
     margin: 0%;
     background-color: rgb(25, 25, 25);
     border: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.541);
 }
 
 #resultado{
